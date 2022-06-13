@@ -1,12 +1,13 @@
 package com.ficohsa.verifydna.dto;
 
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 public class Stats {
 	private int count_mutant_dna;
 	private int count_human_dna;
 	private double ratio;
+
+	public Stats() {
+	}
 
 	public Stats(int count_human_dna, int count_mutant_dna) {
 		this.count_human_dna = count_human_dna;

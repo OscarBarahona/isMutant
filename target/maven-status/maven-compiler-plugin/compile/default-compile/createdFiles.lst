@@ -1,0 +1,12 @@
+com\ficohsa\verifydna\service\impl\VerifyServiceImpl.class
+com\ficohsa\verifydna\service\IVerifyService.class
+com\ficohsa\verifydna\controller\PersonController.class
+com\ficohsa\verifydna\repository\PersonRepository.class
+com\ficohsa\verifydna\util\AppUtil.class
+com\ficohsa\verifydna\config\SwaggerConfig.class
+com\ficohsa\verifydna\entity\Person.class
+com\ficohsa\verifydna\VerifyAdnApplication.class
+com\ficohsa\verifydna\dto\DNA.class
+com\ficohsa\verifydna\dto\Stats.class
+com\ficohsa\verifydna\exceptions\AppServiceException.class
+com\ficohsa\verifydna\util\ConstantUtils.class

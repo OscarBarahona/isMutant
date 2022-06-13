@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ficohsa.verifydna.controller.PersonControllerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.551 s <<< FAILURE! - in com.ficohsa.verifydna.controller.PersonControllerTest
-test_200  Time elapsed: 0.136 s  <<< ERROR!
-java.lang.NoClassDefFoundError: org/junit/Assert
-	at com.ficohsa.verifydna.controller.PersonControllerTest.test_200(PersonControllerTest.java:54)
-Caused by: java.lang.ClassNotFoundException: org.junit.Assert
-	at com.ficohsa.verifydna.controller.PersonControllerTest.test_200(PersonControllerTest.java:54)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.659 s - in com.ficohsa.verifydna.controller.PersonControllerTest

@@ -1,6 +1,5 @@
 package com.ficohsa.verifydna.controller;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -13,8 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.ficohsa.verifydna.dto.DNA;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -39,7 +37,7 @@ class PersonControllerTest {
 		final String baseUrl = "http://localhost:" + randomServerPort + "/mutant/stats";
 		URI uri = new URI(baseUrl);
 		ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
-		Assertions.assertEquals(200, result.getStatusCodeValue());
+		assertEquals(200, result.getStatusCodeValue());
 	}
 
 	@Test

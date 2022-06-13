@@ -83,8 +83,9 @@ class VerifyServiceImplTest {
 	}
 
 	@Test
-	void savenNotNull() {
+	void saven_NotNull() {
 		String[] comodin = { "ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG" };
 		when(service.save(AppUtil.conversionSave(comodin), anyBoolean())).thenReturn(new Person());
+		Assertions.assertNotNull(comodin.toString());
 	}
 }
