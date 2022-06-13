@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS dna;
+DROP TABLE IF EXISTS person;
 
 CREATE TABLE person
 (
