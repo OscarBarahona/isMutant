@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+VerifyADN,com.ficohsa.verifydna.dto,Stats,0,68,0,6,0,20,0,11,0,8
+VerifyADN,com.ficohsa.verifydna.dto,DNA,0,23,0,0,0,4,0,4,0,4
+VerifyADN,com.ficohsa.verifydna.entity,Person,0,46,0,0,0,6,0,8,0,8
+VerifyADN,com.ficohsa.verifydna.config,SwaggerConfig,0,45,0,0,0,10,0,4,0,4
+VerifyADN,com.ficohsa.verifydna.service.impl,VerifyServiceImpl,1,276,1,35,1,36,1,23,0,6
+VerifyADN,com.ficohsa.verifydna.controller,PersonController,62,95,3,3,13,22,3,3,0,3
+VerifyADN,com.ficohsa.verifydna,VerifyAdnApplication,0,8,0,0,0,3,0,2,0,2
+VerifyADN,com.ficohsa.verifydna.util,AppUtil,0,60,0,10,0,15,0,7,0,2
+VerifyADN,com.ficohsa.verifydna.exceptions,AppServiceException,0,4,0,0,0,2,0,1,0,1

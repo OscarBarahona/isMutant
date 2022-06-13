@@ -1,0 +1,7 @@
+com\ficohsa\verifydna\controller\PersonControllerTest.class
+com\ficohsa\verifydna\util\AppUtilTest.class
+com\ficohsa\verifydna\service\impl\VerifyServiceImplTest.class
+com\ficohsa\verifydna\config\SwaggerConfigTest.class
+com\ficohsa\verifydna\dto\StatsTest.class
+com\ficohsa\verifydna\dto\DNATest.class
+com\ficohsa\verifydna\VerifyAdnApplicationTest.class
