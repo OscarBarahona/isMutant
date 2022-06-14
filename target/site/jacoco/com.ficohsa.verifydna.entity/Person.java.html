@@ -13,21 +13,21 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter
-<span class="fc" id="L16">@Setter</span>
-<span class="fc" id="L17">@ToString</span>
+@Setter
+@ToString
 @Entity
 @Table(name = &quot;person&quot;)
 <span class="fc" id="L20">public class Person {</span>
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = &quot;id&quot;)
-<span class="fc" id="L24">	private Long idPerson;</span>
+	private Long idPerson;
 
 	@Column(name = &quot;is_mutant&quot;)
-<span class="fc" id="L27">	private boolean isMutant;</span>
+	private boolean isMutant;
 
 	@Column(name = &quot;dna&quot;)
-<span class="fc" id="L30">	private String dna;</span>
+	private String dna;
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -39,33 +39,33 @@ import io.swagger.annotations.ApiResponses;
 			@ApiResponse(code = ConstantUtils.API_RESPONSE_CODE_OK_KEY_CREATE, message = ConstantUtils.API_RESPONSE_CODE_OK_VALUE, response = String.class) })
 	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity&lt;Object&gt; isMutant(@RequestBody DNA dna) {
-<span class="fc" id="L42">		StopWatch time = new StopWatch();</span>
-<span class="fc" id="L43">		log.info(&quot;Iniciando Servicio {}&quot;, dna);</span>
-<span class="fc" id="L44">		time.start();</span>
+		StopWatch time = new StopWatch();
+		log.info(&quot;Iniciando Servicio {}&quot;, dna);
+		time.start();
 		try {
-<span class="fc" id="L46">			String cadena = AppUtil.conversionSave(dna.getAdn());</span>
-<span class="fc" id="L47">			Person p = service.findByDNA(cadena);</span>
-<span class="fc" id="L48">			log.info(&quot;Persona {}&quot;, p);</span>
-<span class="pc bpc" id="L49" title="1 of 2 branches missed.">			boolean isMutant = (p != null ? p.isMutant() : service.isMutant(dna.getAdn()));</span>
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">			p = p != null ? service.save(cadena, isMutant) : p;</span>
-<span class="fc" id="L51">			log.info(&quot;Detalle de la persona {}&quot;, p);</span>
-<span class="fc" id="L52">			log.info(&quot;isMutant {}&quot;, isMutant);</span>
-<span class="fc" id="L53">			time.stop();</span>
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">			if (isMutant) {</span>
-<span class="fc" id="L55">				log.info(&quot;Tiempo de ejecucion  Millis OK {}&quot;, time.getTotalTimeMillis());</span>
-<span class="fc" id="L56">				return new ResponseEntity&lt;&gt;(HttpStatus.OK);</span>
+<span class="nc" id="L46">			String cadena = AppUtil.conversionSave(dna.getAdn());</span>
+			Person p = service.findByDNA(cadena);
+			log.info(&quot;Persona {}&quot;, p);
+			boolean isMutant = (p != null ? p.isMutant() : service.isMutant(dna.getAdn()));
+			p = p != null ? service.save(cadena, isMutant) : p;
+			log.info(&quot;Detalle de la persona {}&quot;, p);
+			log.info(&quot;isMutant {}&quot;, isMutant);
+			time.stop();
+			if (isMutant) {
+				log.info(&quot;Tiempo de ejecucion  Millis OK {}&quot;, time.getTotalTimeMillis());
+				return new ResponseEntity&lt;&gt;(HttpStatus.OK);
 			} else {
-<span class="nc" id="L58">				log.info(&quot;Tiempo de ejecucion  Millis FORBIDDEN {}&quot;, time.getTotalTimeMillis());</span>
-<span class="nc" id="L59">				return new ResponseEntity&lt;&gt;(HttpStatus.FORBIDDEN);</span>
+				log.info(&quot;Tiempo de ejecucion  Millis FORBIDDEN {}&quot;, time.getTotalTimeMillis());
+				return new ResponseEntity&lt;&gt;(HttpStatus.FORBIDDEN);
 			}
-<span class="nc" id="L61">		} catch (AppServiceException e) {</span>
-<span class="nc" id="L62">			time.stop();</span>
-<span class="nc" id="L63">			log.info(&quot;Tiempo de ejecucion  Millis  AppServiceException {}&quot;, time.getTotalTimeMillis());</span>
-<span class="nc" id="L64">			return new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);</span>
-<span class="nc" id="L65">		} catch (Exception e) {</span>
-<span class="nc" id="L66">			log.info(&quot;Tiempo de ejecucion  Millis Exception {}&quot;, time.getTotalTimeMillis());</span>
-<span class="nc" id="L67">			time.stop();</span>
-<span class="nc" id="L68">			return new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);</span>
+		} catch (AppServiceException e) {
+			time.stop();
+			log.info(&quot;Tiempo de ejecucion  Millis  AppServiceException {}&quot;, time.getTotalTimeMillis());
+			return new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);
+		} catch (Exception e) {
+			log.info(&quot;Tiempo de ejecucion  Millis Exception {}&quot;, time.getTotalTimeMillis());
+			time.stop();
+			return new ResponseEntity&lt;&gt;(HttpStatus.BAD_REQUEST);
 		}
 	}
 

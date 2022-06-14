@@ -24,65 +24,65 @@ import com.ficohsa.verifydna.util.AppUtil;
 	@Transactional
 	@Override
 	public boolean isMutant(String[] dna) {
-<span class="fc bfc" id="L27" title="All 2 branches covered.">		if (dna == null) {</span>
-<span class="fc" id="L28">			throw new AppServiceException(&quot;DNA is null&quot;);</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">		if (dna == null) {</span>
+<span class="nc" id="L28">			throw new AppServiceException(&quot;DNA is null&quot;);</span>
 		}
-<span class="fc bfc" id="L30" title="All 2 branches covered.">		if (dna.length != 6) {</span>
-<span class="fc" id="L31">			throw new AppServiceException(&quot;the number of characters must not be less than or greater than 6 digits&quot;);</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">		if (dna.length != 6) {</span>
+<span class="nc" id="L31">			throw new AppServiceException(&quot;the number of characters must not be less than or greater than 6 digits&quot;);</span>
 		}
-<span class="fc" id="L33">		AppUtil.validateCharacter(dna);</span>
+<span class="nc" id="L33">		AppUtil.validateCharacter(dna);</span>
 
-<span class="fc" id="L35">		int totalDna = 0;</span>
-<span class="fc" id="L36">		boolean respuesta = false;</span>
+<span class="nc" id="L35">		int totalDna = 0;</span>
+<span class="nc" id="L36">		boolean respuesta = false;</span>
 
 		// Recorre el arreglo principal
-<span class="fc bfc" id="L39" title="All 2 branches covered.">		for (int i = 0; i &lt; dna.length; i++) {</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">		for (int i = 0; i &lt; dna.length; i++) {</span>
 			// j determina la posicion dentro del string
-<span class="fc bfc" id="L41" title="All 2 branches covered.">			for (int j = 0; j &lt; dna[i].length(); j++) {</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">			for (int j = 0; j &lt; dna[i].length(); j++) {</span>
 				// Control Horizontal
-<span class="fc bfc" id="L43" title="All 2 branches covered.">				if (j &lt; dna[i].length() - 3) {</span>
-<span class="fc bfc" id="L44" title="All 2 branches covered.">					if (isEqual(dna[i].charAt(j), dna[i].charAt(j + 1), dna[i].charAt(j + 2), dna[i].charAt(j + 3))) {</span>
-<span class="fc" id="L45">						totalDna++;</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">				if (j &lt; dna[i].length() - 3) {</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">					if (isEqual(dna[i].charAt(j), dna[i].charAt(j + 1), dna[i].charAt(j + 2), dna[i].charAt(j + 3))) {</span>
+<span class="nc" id="L45">						totalDna++;</span>
 					}
 				}
 				// Control Vertical
-<span class="fc bfc" id="L49" title="All 2 branches covered.">				if (i &lt; dna.length - 3) {</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">				if (i &lt; dna.length - 3) {</span>
 					// vertical check
-<span class="fc bfc" id="L51" title="All 2 branches covered.">					if (isEqual(dna[i].charAt(j), dna[i + 1].charAt(j), dna[i + 2].charAt(j), dna[i + 3].charAt(j))) {</span>
-<span class="fc" id="L52">						totalDna++;</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">					if (isEqual(dna[i].charAt(j), dna[i + 1].charAt(j), dna[i + 2].charAt(j), dna[i + 3].charAt(j))) {</span>
+<span class="nc" id="L52">						totalDna++;</span>
 					}
 				}
 
 				// Control Oblicuo
-<span class="fc bfc" id="L57" title="All 4 branches covered.">				if (i &lt; dna.length - 3 &amp;&amp; j &lt; dna[i].length() - 3) {</span>
-<span class="fc bfc" id="L58" title="All 2 branches covered.">					if (isEqual(dna[i].charAt(j), dna[i + 1].charAt(j + 1), dna[i + 2].charAt(j + 2),</span>
-<span class="fc" id="L59">							dna[i + 3].charAt(j + 3))) {</span>
-<span class="fc" id="L60">						totalDna++;</span>
+<span class="nc bnc" id="L57" title="All 4 branches missed.">				if (i &lt; dna.length - 3 &amp;&amp; j &lt; dna[i].length() - 3) {</span>
+<span class="nc" id="L58">					if (isEqual(dna[i].charAt(j), dna[i + 1].charAt(j + 1), dna[i + 2].charAt(j + 2),</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">							dna[i + 3].charAt(j + 3))) {</span>
+<span class="nc" id="L60">						totalDna++;</span>
 					}
 				}
 
 				// Control Oblicuo Invertido
-<span class="fc bfc" id="L65" title="All 4 branches covered.">				if (i &gt;= 3 &amp;&amp; j &lt; dna[i].length() - 3) {</span>
-<span class="pc bpc" id="L66" title="1 of 2 branches missed.">					if (isEqual(dna[i].charAt(j), dna[i - 1].charAt(j + 1), dna[i - 2].charAt(j + 2),</span>
-<span class="fc" id="L67">							dna[i - 3].charAt(j + 3))) {</span>
+<span class="nc bnc" id="L65" title="All 4 branches missed.">				if (i &gt;= 3 &amp;&amp; j &lt; dna[i].length() - 3) {</span>
+<span class="nc" id="L66">					if (isEqual(dna[i].charAt(j), dna[i - 1].charAt(j + 1), dna[i - 2].charAt(j + 2),</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">							dna[i - 3].charAt(j + 3))) {</span>
 <span class="nc" id="L68">						totalDna++;</span>
 					}
 				}
 
-<span class="fc bfc" id="L72" title="All 2 branches covered.">				if (totalDna &gt; 1) {</span>
-<span class="fc" id="L73">					respuesta = true;</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">				if (totalDna &gt; 1) {</span>
+<span class="nc" id="L73">					respuesta = true;</span>
 
 				}
 			}
 
 		}
 
-<span class="fc" id="L80">		return respuesta;</span>
+<span class="nc" id="L80">		return respuesta;</span>
 	}
 
 	@Override
 	public boolean isEqual(char a, char b, char c, char d) {
-<span class="fc bfc" id="L85" title="All 6 branches covered.">		return a == b &amp;&amp; b == c &amp;&amp; c == d;</span>
+<span class="nc bnc" id="L85" title="All 6 branches missed.">		return a == b &amp;&amp; b == c &amp;&amp; c == d;</span>
 	}
 
 	@Override
@@ -95,15 +95,15 @@ import com.ficohsa.verifydna.util.AppUtil;
 
 	@Override
 	public Person findByDNA(String dna) {
-<span class="fc" id="L98">		return repository.validateDNA(dna);</span>
+<span class="nc" id="L98">		return repository.validateDNA(dna);</span>
 	}
 
 	@Override
 	public Person save(String dna, boolean type) {
-<span class="fc" id="L103">		Person ps = new Person();</span>
-<span class="fc" id="L104">		ps.setMutant(type);</span>
-<span class="fc" id="L105">		ps.setDna(dna);</span>
-<span class="fc" id="L106">		return repository.save(ps);</span>
+		Person ps = new Person();
+<span class="nc" id="L104">		ps.setMutant(type);</span>
+		ps.setDna(dna);
+		return repository.save(ps);
 	}
 
 }

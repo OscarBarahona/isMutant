@@ -16,7 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 	@Bean
 	public Docket api() {
 <span class="fc" id="L18">		return new Docket(DocumentationType.SWAGGER_2).select()</span>
-<span class="fc" id="L19">				.apis(RequestHandlerSelectors.basePackage(&quot;com.ficohsa.verifyDNAcontroller&quot;))</span>
+<span class="fc" id="L19">				.apis(RequestHandlerSelectors.basePackage(&quot;com.ficohsa.verifydna.controller&quot;))</span>
 <span class="fc" id="L20">				.paths(PathSelectors.regex(&quot;/.*&quot;)).build().apiInfo(apiInfo());</span>
 	}
 

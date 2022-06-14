@@ -10,27 +10,27 @@ public class AppUtil {
 	public static boolean validateCharacter(String[] dna) {
 <span class="fc" id="L11">		boolean res = true;</span>
 <span class="fc" id="L12">		int i = 0;</span>
-<span class="fc bfc" id="L13" title="All 4 branches covered.">		while (i &lt; dna.length &amp;&amp; res) {</span>
-<span class="fc bfc" id="L14" title="All 2 branches covered.">			if (!(dna[i].matches(&quot;[ACTG]*&quot;))) {</span>
+<span class="pc bpc" id="L13" title="1 of 4 branches missed.">		while (i &lt; dna.length &amp;&amp; res) {</span>
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">			if (!(dna[i].matches(&quot;[ACTG]*&quot;))) {</span>
 <span class="fc" id="L15">				res = false;</span>
 			}
 <span class="fc" id="L17">			i++;</span>
 		}
 
-<span class="fc bfc" id="L20" title="All 2 branches covered.">		if (!res) {</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">		if (!res) {</span>
 <span class="fc" id="L21">			throw new AppServiceException(&quot;Only letters A,T,C,G are allowed&quot;);</span>
 		}
-<span class="fc" id="L23">		res = true;</span>
-<span class="fc" id="L24">		return res;</span>
+<span class="nc" id="L23">		res = true;</span>
+<span class="nc" id="L24">		return res;</span>
 	}
 
 	public static String conversionSave(String[] stringArray) {
-<span class="fc" id="L28">		StringBuilder builder = new StringBuilder();</span>
-<span class="fc" id="L29">		builder.append(stringArray[0]);</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">		for (int i = 1; i &lt; stringArray.length; i++) {</span>
-<span class="fc" id="L31">			builder.append(&quot;, &quot;).append(stringArray[i]);</span>
+<span class="nc" id="L28">		StringBuilder builder = new StringBuilder();</span>
+<span class="nc" id="L29">		builder.append(stringArray[0]);</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">		for (int i = 1; i &lt; stringArray.length; i++) {</span>
+<span class="nc" id="L31">			builder.append(&quot;, &quot;).append(stringArray[i]);</span>
 		}
-<span class="fc" id="L33">		return builder.toString();</span>
+<span class="nc" id="L33">		return builder.toString();</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,4 +1,67 @@
 -------------------------------------------------------------------------------
 Test set: com.ficohsa.verifydna.service.impl.VerifyServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.083 s - in com.ficohsa.verifydna.service.impl.VerifyServiceImplTest
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! - in com.ficohsa.verifydna.service.impl.VerifyServiceImplTest
+findByDNA_Null  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+PersonComplements  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+testMutant_True  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+Stats_NotNull  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+testMutant_dna_mayor_Size  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+testMutant_dna_null  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
+saven_NotNull  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The method setDna(String) is undefined for the type Person
+	The method setMutant(boolean) is undefined for the type Person
+	The method setAdn(String[]) is undefined for the type DNA
+
+	at com.ficohsa.verifydna.service.impl.VerifyServiceImplTest.setUp(VerifyServiceImplTest.java:39)
+
