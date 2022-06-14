@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "1efd0bcd-ee95-46e4-8083-24c05813262e",
+		"name": "Fichosa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3209740"
+	},
+	"item": [
+		{
+			"name": "STATS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ismutant-app-crs6e.ondigitalocean.app/mutant/stats",
+					"protocol": "https",
+					"host": [
+						"ismutant-app-crs6e",
+						"ondigitalocean",
+						"app"
+					],
+					"path": [
+						"mutant",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVE PERSON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dna\":[\"ATGCGA\",\"CAGTGC\",\"TTATGT\",\"AGAAGG\",\"CCCCTA\",\"TCACTG\"] }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ismutant-app-crs6e.ondigitalocean.app/mutant",
+					"protocol": "https",
+					"host": [
+						"ismutant-app-crs6e",
+						"ondigitalocean",
+						"app"
+					],
+					"path": [
+						"mutant"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
