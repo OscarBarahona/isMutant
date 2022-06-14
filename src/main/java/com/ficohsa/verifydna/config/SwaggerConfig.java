@@ -16,7 +16,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.ficohsa.verifyDNAcontroller"))
+				.apis(RequestHandlerSelectors.basePackage("com.ficohsa.verifydna.controller"))
 				.paths(PathSelectors.regex("/.*")).build().apiInfo(apiInfo());
 	}
 
